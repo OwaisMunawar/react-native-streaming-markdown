@@ -1,0 +1,33 @@
+name: Bug report
+description: Markdown that renders incorrectly, or a crash.
+labels: [bug]
+body:
+  - type: textarea
+    id: input
+    attributes:
+      label: Markdown input
+      description: The smallest text that reproduces the problem. If it only happens mid-stream, include the prefix where it goes wrong.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      description: What you expected to see, and what rendered instead. Screenshots help.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Library version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform and React Native version
+      placeholder: iOS 26, React Native 0.86, Expo SDK 57
+    validations:
+      required: true
