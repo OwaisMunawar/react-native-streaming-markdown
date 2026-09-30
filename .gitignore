@@ -92,5 +92,4 @@ coverage/
 example/dist/
 
 # Local tool settings
-.claude/
 .cursor/

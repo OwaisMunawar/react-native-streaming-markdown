@@ -26,9 +26,13 @@ This library splits the text into blocks, freezes blocks that can no longer chan
 
 ```sh
 npm install @owaismunawar/react-native-streaming-markdown
-# or
-yarn add @owaismunawar/react-native-streaming-markdown
 ```
+
+> The first npm release is being prepared. Until it lands, install straight from GitHub (the `prepare` script builds it):
+>
+> ```sh
+> npm install github:OwaisMunawar/react-native-streaming-markdown
+> ```
 
 Pure TypeScript with no native code and no dependencies beyond `react` and `react-native`. Works in Expo Go, bare React Native and React Native Web.
 
