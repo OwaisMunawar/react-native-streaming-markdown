@@ -1,0 +1,177 @@
+{
+  "name": "@owaismunawar/react-native-streaming-markdown",
+  "version": "0.1.0",
+  "description": "Markdown renderer for React Native built for streaming LLM output. Renders partial markdown without flicker and only re-parses the block that is still growing.",
+  "main": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "exports": {
+    ".": {
+      "owaismunawar-react-native-streaming-markdown-source": "./src/index.ts",
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "example": "yarn workspace @owaismunawar/react-native-streaming-markdown-example",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc",
+    "lint": "eslint \"**/*.{js,ts,tsx}\" --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "del-cli lib",
+    "prepare": "bob build",
+    "bench": "tsx scripts/bench.ts",
+    "size": "size-limit"
+  },
+  "keywords": [
+    "react-native",
+    "markdown",
+    "streaming",
+    "llm",
+    "ai",
+    "chat",
+    "expo",
+    "gfm",
+    "react-native-web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OwaisMunawar/react-native-streaming-markdown.git"
+  },
+  "author": "Owais Munawwar <owais.munawar@gmail.com> (https://github.com/OwaisMunawar)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OwaisMunawar/react-native-streaming-markdown/issues"
+  },
+  "homepage": "https://github.com/OwaisMunawar/react-native-streaming-markdown#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^2.1.0",
+    "@eslint/eslintrc": "^3.3.6",
+    "@eslint/js": "^9.39.5",
+    "@react-native/babel-preset": "0.86.2",
+    "@react-native/eslint-config": "0.86.2",
+    "@react-native/jest-preset": "0.86.3",
+    "@size-limit/preset-small-lib": "^14.1.0",
+    "@testing-library/react-native": "^14.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.2.0",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-ft-flow": "^3.0.11",
+    "eslint-plugin-prettier": "^5.5.6",
+    "jest": "^30.5.2",
+    "prettier": "^3.9.6",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-builder-bob": "^0.43.1",
+    "size-limit": "^14.1.0",
+    "test-renderer": "~1.2.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "workspaces": [
+    "example"
+  ],
+  "packageManager": "yarn@4.11.0",
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "printWidth": 90
+  },
+  "sideEffects": false,
+  "jest": {
+    "preset": "@react-native/jest-preset",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/example/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/__fixtures__/**",
+      "!src/index.ts",
+      "!src/types.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "statements": 88,
+        "functions": 90,
+        "branches": 75
+      },
+      "./src/parser/": {
+        "lines": 95,
+        "statements": 90,
+        "functions": 100,
+        "branches": 85
+      }
+    }
+  },
+  "size-limit": [
+    {
+      "name": "Full package (StreamingMarkdown + parser)",
+      "path": "lib/module/index.js",
+      "import": "{ StreamingMarkdown }",
+      "ignore": [
+        "react",
+        "react-native",
+        "react/jsx-runtime"
+      ],
+      "limit": "8 kB"
+    },
+    {
+      "name": "Parser only",
+      "path": "lib/module/index.js",
+      "import": "{ createStreamingParser }",
+      "ignore": [
+        "react",
+        "react-native",
+        "react/jsx-runtime"
+      ],
+      "limit": "4.5 kB"
+    }
+  ]
+}

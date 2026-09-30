@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "types": []
+  },
+  "exclude": ["example", "lib", "scripts", "src/__tests__", "src/__fixtures__"]
+}
