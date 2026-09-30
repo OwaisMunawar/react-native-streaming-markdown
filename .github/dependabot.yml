@@ -9,11 +9,16 @@ updates:
       dev-dependencies:
         dependency-type: development
     ignore:
-      # React and React Native versions follow the Expo SDK used by the example.
+      # React, React Native and native modules follow the Expo SDK used by the example.
       - dependency-name: react
       - dependency-name: react-native
       - dependency-name: react-dom
       - dependency-name: '@react-native/*'
+      - dependency-name: 'react-native-*'
+      - dependency-name: 'expo*'
+      # Major tooling upgrades (ESLint, TypeScript, Jest) are done by hand.
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
