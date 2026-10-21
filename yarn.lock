@@ -2222,9 +2222,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/metro-runtime@npm:~57.0.16":
-  version: 57.0.16
-  resolution: "@expo/metro-runtime@npm:57.0.16"
+"@expo/metro-runtime@npm:~57.0.17":
+  version: 57.0.17
+  resolution: "@expo/metro-runtime@npm:57.0.17"
   dependencies:
     "@expo/log-box": "npm:^57.0.4"
     anser: "npm:^1.4.9"
@@ -2240,7 +2240,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10c0/58ee1a7dcf0579aab09d8c3bcbc84bec139bf000a736921b135fcc9fa8b1e66290ceabddc54ef0419f8af73de9cdbe96f7effe429e1d6dc578152c7aee7d94b3
+  checksum: 10c0/94f02f5bb386bc1792a800c7ac7148610a0ca439068c713bd9c0e5fae9130d81028e07b34008dacbfadaa1fd879e4c581180c4c1efe74dfe86b2272bf2366ac5
   languageName: node
   linkType: hard
 
@@ -2972,7 +2972,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@owaismunawar/react-native-streaming-markdown-example@workspace:example"
   dependencies:
-    "@expo/metro-runtime": "npm:~57.0.16"
+    "@expo/metro-runtime": "npm:~57.0.17"
     expo: "npm:~57.0.26"
     expo-clipboard: "npm:~57.0.2"
     expo-status-bar: "npm:~57.0.1"
