@@ -2172,6 +2172,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo/log-box@npm:^57.0.5":
+  version: 57.0.5
+  resolution: "@expo/log-box@npm:57.0.5"
+  dependencies:
+    "@expo/dom-webview": "npm:^57.0.1"
+    anser: "npm:^1.4.9"
+    stacktrace-parser: "npm:^0.1.10"
+  peerDependencies:
+    "@expo/dom-webview": ^57.0.1
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/14bc11e07e4d5e171de76cb499271f19abfa7dd3f8be6cdfbe36021352b28a7405e5dd26bee8c232bb036813b560eef50bbd263506d5c8b1f240448752a4e0af
+  languageName: node
+  linkType: hard
+
 "@expo/metro-config@npm:~57.0.12":
   version: 57.0.12
   resolution: "@expo/metro-config@npm:57.0.12"
@@ -2222,17 +2238,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/metro-runtime@npm:~57.0.16":
-  version: 57.0.16
-  resolution: "@expo/metro-runtime@npm:57.0.16"
+"@expo/metro-runtime@npm:~57.0.18":
+  version: 57.0.18
+  resolution: "@expo/metro-runtime@npm:57.0.18"
   dependencies:
-    "@expo/log-box": "npm:^57.0.4"
+    "@expo/log-box": "npm:^57.0.5"
     anser: "npm:^1.4.9"
     pretty-format: "npm:^29.7.0"
     stacktrace-parser: "npm:^0.1.10"
     whatwg-fetch: "npm:^3.0.0"
   peerDependencies:
-    "@expo/log-box": ^57.0.4
+    "@expo/log-box": ^57.0.5
     expo: "*"
     react: "*"
     react-dom: "*"
@@ -2240,7 +2256,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10c0/58ee1a7dcf0579aab09d8c3bcbc84bec139bf000a736921b135fcc9fa8b1e66290ceabddc54ef0419f8af73de9cdbe96f7effe429e1d6dc578152c7aee7d94b3
+  checksum: 10c0/d9053c4f07b2a518b3ddf51d1b4cce24847cb51c75ce5605cd28a41e68983fafcf4f77755b533fb0bd0f84673db262a9694224c936bcd01820989c994d2af083
   languageName: node
   linkType: hard
 
@@ -2972,7 +2988,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@owaismunawar/react-native-streaming-markdown-example@workspace:example"
   dependencies:
-    "@expo/metro-runtime": "npm:~57.0.16"
+    "@expo/metro-runtime": "npm:~57.0.18"
     expo: "npm:~57.0.26"
     expo-clipboard: "npm:~57.0.2"
     expo-status-bar: "npm:~57.0.1"
